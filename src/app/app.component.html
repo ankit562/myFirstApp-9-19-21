@@ -1,0 +1,27 @@
+
+<div class="container">
+    <h1>{{title}}</h1>
+    <!-- <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+        <ul class="nav navbar-nav">
+            <li class="nav-item active">
+                <a routerLinkActive="active" routerLink="list" class="nav-link">List</a>
+            </li>
+            <li class="nav-item">
+                <a routerLinkActive="active" routerLink="create" class="nav-link">Create</a>
+            </li>
+        </ul>
+    </nav> -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" routerLinkActive="active" routerLink="list" href="#">List <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLinkActive="active" routerLink="create" href="#">Create</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    <router-outlet></router-outlet>
+</div>
