@@ -8,21 +8,23 @@ import { FormGroup, FormControl } from '@angular/forms';
   styleUrls: ['./create-employee.component.css']
 })
 export class CreateEmployeeComponent implements OnInit {
+  public results: any; // Change it private to public
   // This FormGroup contains fullName and Email form controls
   employeeForm: FormGroup;
 
-  constructor() { }
+  constructor() { 
+    this.employeeForm = new FormGroup({
+    fullName: new FormControl(),
+    email: new FormControl()
+  });
+}
 
   // Initialise the FormGroup with the 2 FormControls we need.
   // ngOnInit ensures the FormGroup and it's form controls are
   // created when the component is initialised
-  ngOnInit(): void {
-    this.employeeForm = new FormGroup({
-      fullName: new FormControl(),
-      email: new FormControl()
-    });
+  ngOnInit() {
   }
-  onSubmit(): void {
+  onSubmit() {
     console.log(this.employeeForm.value);
   }
 }

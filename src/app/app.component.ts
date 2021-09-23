@@ -13,7 +13,8 @@ export class AppComponent {
   LastName: string="";
   Email: string="";
   password: string="";
-  constructor (private frmbuilder:FormBuilder) {
+  
+  constructor (public frmbuilder:FormBuilder) {
     this.signupForm=frmbuilder.group({
     fname: new FormControl(),
     lname: new FormControl(),
